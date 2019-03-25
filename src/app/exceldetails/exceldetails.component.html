@@ -1,0 +1,21 @@
+<input type="file" (change)="onFileChange($event)" multiple="false" />
+
+<table>
+  <tr *ngFor="let row of dataList">
+    <td *ngFor="let val of row">
+      {{val}}
+    </td>
+  </tr>
+</table>
+<br />
+<div>
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+</div>
